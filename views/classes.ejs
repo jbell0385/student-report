@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Canvas API</title>
+    <title>Classes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <div class="container">
-        <h1>Select a Student</h1>
-        
+        <h1>classes</h1>
         <div class="row">
           <div class="col">
-            <% totalUsers.forEach((user)=> { %>
-              <li>
-                <a href="/students/<%=user.id%>"><%=user.sortable_name%></a>
-              </li>
-            <% }) %>
+            <%for(var i = 0; i<totalEnrollments.length; i++){%>
+                <li><a href="/students/<%=studentID%>/course/<%=totalEnrollments[i].id%>"><%= totalEnrollments[i].name %></a> </li>
+            <%}%>
           </div>
         </div>
     </div>
